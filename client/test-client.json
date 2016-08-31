@@ -1,0 +1,228 @@
+{
+	"id": "8143fc22-c62b-2dd7-b2e7-15de4a9cbd0c",
+	"name": "TVE Middleware",
+	"description": "All tve middleware service layer requests and responses.",
+	"order": [],
+	"folders": [
+		{
+			"id": "5de8d47f-2267-2cb8-9087-104fc3b59a42",
+			"name": "Auth",
+			"description": "middleware service authorization calls",
+			"write": true,
+			"order": [
+				"f22ffa28-afd0-b032-91da-7825e6069ba1"
+			],
+			"collection_name": "TVE Middleware",
+			"collection_owner": 0,
+			"collection_id": "8143fc22-c62b-2dd7-b2e7-15de4a9cbd0c",
+			"collection": "8143fc22-c62b-2dd7-b2e7-15de4a9cbd0c",
+			"owner": 0,
+			"collectionId": "8143fc22-c62b-2dd7-b2e7-15de4a9cbd0c"
+		},
+		{
+			"id": "4ae36735-eb60-7fa4-f139-5f9bb8f71e6f",
+			"name": "shows",
+			"description": "tve shows feed request",
+			"write": true,
+			"order": [
+				"a095c665-0993-85bf-b4b4-0223aec1dd84",
+				"9a5e4118-b2c8-93d8-c7ff-d23e81a92675"
+			],
+			"collection_name": "TVE Middleware",
+			"collection_owner": 0,
+			"collection_id": "8143fc22-c62b-2dd7-b2e7-15de4a9cbd0c",
+			"collection": "8143fc22-c62b-2dd7-b2e7-15de4a9cbd0c",
+			"owner": 0,
+			"collectionId": "8143fc22-c62b-2dd7-b2e7-15de4a9cbd0c"
+		}
+	],
+	"timestamp": 1436213432949,
+	"owner": 0,
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "9a5e4118-b2c8-93d8-c7ff-d23e81a92675",
+			"headers": "Content-Type: application/json\nx-access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0MzYzMDE4ODM3Mzl9.vxs08DkFGqyjHW-IwFvCrzhXamPQ_Tw987lFE5kw_1E\nx-key: test\n",
+			"url": "http://localhost:3000/api/v1/shows/C2C0FFFF-CD07-543D-ED5E-4EB4CCC576BF",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1436975430488,
+			"name": "Get Show by Id",
+			"description": "request show by id",
+			"collectionId": "8143fc22-c62b-2dd7-b2e7-15de4a9cbd0c",
+			"responses": []
+		},
+		{
+			"id": "a095c665-0993-85bf-b4b4-0223aec1dd84",
+			"headers": "Content-Type: application/json\nx-access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0MzYzMDE4ODM3Mzl9.vxs08DkFGqyjHW-IwFvCrzhXamPQ_Tw987lFE5kw_1E\nx-key: test\n",
+			"url": "http://localhost:3000/api/v1/shows",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1436216080852,
+			"name": "Get All Shows",
+			"description": "request all shows",
+			"collectionId": "8143fc22-c62b-2dd7-b2e7-15de4a9cbd0c",
+			"responses": []
+		},
+		{
+			"id": "f22ffa28-afd0-b032-91da-7825e6069ba1",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://localhost:3000/login",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1436215527700,
+			"name": "Get Token",
+			"description": "middleware service authorization token request",
+			"collectionId": "8143fc22-c62b-2dd7-b2e7-15de4a9cbd0c",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 371,
+					"headers": [
+						{
+							"name": "Access-Control-Allow-Headers",
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-type,Accept,X-Access-Token,X-Key",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"name": "Access-Control-Allow-Methods",
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "226",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Mon, 06 Jul 2015 20:44:43 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "ETag",
+							"key": "ETag",
+							"value": "W/\"e2-hfyL5BnpaUw3H1gKjQXPqw\"",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "X-Powered-By",
+							"key": "X-Powered-By",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [
+						{
+							"domain": "localhost",
+							"expirationDate": 1496430020,
+							"hostOnly": true,
+							"httpOnly": false,
+							"name": "_ga",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"storeId": "0",
+							"value": "GA1.1.189557801.1433<br/>358020",
+							"expires": "6/2/2017, 2:00:20 PM"
+						},
+						{
+							"domain": "localhost",
+							"expirationDate": 1439779230.861231,
+							"hostOnly": true,
+							"httpOnly": true,
+							"name": ".ASPXANONYMOUS",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"storeId": "0",
+							"value": "9v0qFZbY0AEkAAAAMWIx<br/>Nzg3ZTAtMWUyOS00ZmI5<br/>LWI5NmItYTQ4M2IwYzNj<br/>ZmUw0",
+							"expires": "8/16/2015, 9:40:30 PM"
+						}
+					],
+					"mime": "",
+					"text": "{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0MzYzMDE4ODM3Mzl9.vxs08DkFGqyjHW-IwFvCrzhXamPQ_Tw987lFE5kw_1E\",\"expires\":1436301883739,\"user\":{\"name\":\"roku-user\",\"role\":\"service-user\",\"username\":\"roku-user@nbc.com\"}}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"isSample": true,
+					"scrollToResult": true,
+					"runTests": true,
+					"id": "6e5d19d6-bc51-17e9-2fed-6c6a9ebb742d",
+					"name": "Token Response",
+					"request": {
+						"name": "Get Token",
+						"description": "middleware service authorization token request",
+						"url": "http://localhost:3000/login",
+						"pathVariables": {},
+						"data": "{\"username\": \"test\", \"password\": \"test\"}",
+						"headers": "Content-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "POST",
+						"tests": "",
+						"isFromCollection": true,
+						"version": 2
+					}
+				}
+			],
+			"rawModeData": "{\n    \"username\": \"test\", \n    \"password\": \"test\"\n}"
+		}
+	]
+}

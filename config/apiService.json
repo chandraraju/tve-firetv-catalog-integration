@@ -1,0 +1,14 @@
+{
+  "service": {
+    "version": "1.0",
+    "url": "https://api.nbcuni.com/tve/",
+    "api_key": "yk5fvwdx4ek5pqf2t3xga2jz",
+    "api": {
+      "SHOWS_LIST": "apps/usa-android/pages/programs",
+      "SHOW_VIDEOS_LIST": "apps/usa-android/pages/programs/"
+    }
+  },
+  "hmac": {
+    "key": "ISO-ANDROID-TVE"
+  }
+}
